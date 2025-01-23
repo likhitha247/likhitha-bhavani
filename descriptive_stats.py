@@ -37,7 +37,23 @@ plt.hist(df["Accept"])
 
 sns.histplot(df["Accept"])
 
-
-
 sns.histplot(df["Accept"], kde = True)
 
+#create a pandas series of batsman1 scores
+s1 = [10,20,30,50,40,45,34,12]
+scores1 = pd.Series(s1)
+scores1
+
+plt.boxplot(scores1, vert=False)
+
+#create a pandas series of batsman scores
+s2 = [10,20,30,50,40,150,130,190]
+scores2 = pd.Series(s2)
+scores2
+
+plt.boxplot(scores2, vert=False)
+
+df = pd.read_csv("/home/universities.csv")
+print(df)
+#print box plot for SAT column
+plt.boxplot(df["SAT"])
